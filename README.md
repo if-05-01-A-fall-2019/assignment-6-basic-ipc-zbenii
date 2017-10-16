@@ -17,5 +17,5 @@ Describe with your own words: What is a race condition?
 3. **Peterson's Solution**
 	1. Play through the two scenarios of the handout of Peterson's solution. Document how it works.
 	2. Play through the scenario which makes the strict alternation approach fail. Document how it fails.
-	3. What is the meaning of the variable {\tt turn} in Peterson's solution? When does it have any effect?
+	3. What is the meaning of the variable `loser` in Peterson's solution? When does it have any effect?
 	4. Extend the given functions such they can handle three processes.
