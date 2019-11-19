@@ -40,10 +40,26 @@ int loser // shared variable
 Bool interested[3] // 3 processes only
 
 void enter_region(int process) {
-  int other1 = 2 - process - 1;
-  int other2 = other1 + 1;
+  int other1;
+  int other2
+  if(process==0)
+  {
+    other1=1;
+    other2=2;
+  }
+  else if(process==1)
+  {
+    other1=0;
+    other2=2;
+  }
+  else
+  {
+    other1=1;
+    other2=2;
+  }
+  
   interested[process] = True;
   loser = process;
-  while (loser == process && interested[other1] && interested[other2]) ;
+  while (loser == process && (interested[other1] || interested[other2])) ;
 }
 ```
